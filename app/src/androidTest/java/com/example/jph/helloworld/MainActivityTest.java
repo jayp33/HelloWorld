@@ -12,6 +12,11 @@ public class MainActivityTest extends TestCase {
 
     }
 
+    public void test_green() throws Exception {
+        assertTrue(true);
+
+    }
+
     public void tearDown() throws Exception {
 
     }
