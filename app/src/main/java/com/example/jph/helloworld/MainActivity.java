@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -33,5 +36,18 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void button1(View view) {
+        final TextView textView = (TextView) findViewById(R.id.textView2);
+        int no = (int)(Math.random()*100);
+        textView.setText(Integer.toString(no));
+    }
+
+    public void button2(View view) {
+        TextView textView = (TextView) findViewById(R.id.textView2);
+        int no = Integer.parseInt(textView.getText().toString());
+        TextView textView2 = (TextView) findViewById(R.id.textView3);
+        textView2.setText(Integer.toString(no/2));
     }
 }
